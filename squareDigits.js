@@ -5,12 +5,5 @@
 // Note: The function accepts an integer and returns an integer
 
 function squareDigits(num){
-  //may the code be with you
-  var finalSum = [];
-  var numArray = num.toString().split("");
-  for (var i = 0; i < numArray.length; i++) {
-  	var currentNum = parseInt(numArray[i]);
-  	finalSum.push(currentNum*currentNum);
-  }
-  return parseInt(finalSum.join("").replace(",", ""));
+	return Number(('' + num).split('').map(function (val) { return val * val; }).join(''));
 }
