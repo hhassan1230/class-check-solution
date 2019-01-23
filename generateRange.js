@@ -14,15 +14,9 @@
 
 
 function generateRange(min, max, step){
-  finalArray = [];
-  finalArray.push(min);
-  var i = min;
-while (i <= max) {
-	var nextStep = i + step;
-	if (max >= nextStep) {
-		finalArray.push(nextStep);
+	let arr = [];
+	for (var i = min; i <= max; i+=step) {
+		arr.push(i);
 	}
-	i = nextStep;
-} 
-return finalArray;
+  return arr;
 }
