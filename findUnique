@@ -1,0 +1,23 @@
+var deletedUser = [];
+
+var needAccess = [];
+
+function findUnique(deletedUserArray, needAccessArray){
+	uniqueArray = [];
+	for (var i = 0; i < deletedUserArray.length; i++) {
+		var isUniqueUser = true;
+		var currentUser = deletedUserArray[i];
+		for (var z = 0; z < needAccessArray.length; z++) {
+			var possibleUniqueUser = needAccessArray[z];
+			if (possibleUniqueUser === currentUser) {
+				isUniqueUser = false;
+			}
+		}
+		if (isUniqueUser) {
+			uniqueArray.push(currentUser);
+		}
+	}
+	return uniqueArray;
+};
+
+var finalFanArray = findUnique(deletedUser, needAccess);
